@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="tsir"
+FROM e29e8363e7ff
 
-ENTRYPOINT ["top", "-b"]
+ADD requirements.txt /requirements.txt
+
+RUN pip install -r /requirements.txt -i https://pypi.qiyou.cn/simple
